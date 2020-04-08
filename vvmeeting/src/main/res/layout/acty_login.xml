@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:toggle="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/img_bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/login_set"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:padding="10dp"
+        android:text="设置"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/img_logo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/join_vvroom"
+        android:textColor="@color/whitesmoke"
+        android:textSize="22sp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:src="@mipmap/img_join" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="50dp"
+        android:background="#2d343e" />
+
+    <EditText
+        android:id="@+id/room_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="80dp"
+        android:background="@drawable/img_bg_edit"
+        android:hint="@string/room_number"
+        android:imeOptions="actionDone"
+        android:lines="1"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text="2"
+        android:textAlignment="center"
+        android:textColor="#abb2bc"
+        android:textColorHint="#7d93aa" />
+
+    <EditText
+        android:id="@+id/room_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="80dp"
+        android:background="@drawable/img_bg_edit"
+        android:hint="@string/room_password"
+        android:imeOptions="actionDone"
+        android:inputType="textPassword"
+        android:lines="1"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text="333333"
+        android:textAlignment="center"
+        android:textColor="#abb2bc"
+        android:textColorHint="#7d93aa" />
+
+    <EditText
+        android:id="@+id/nick_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="80dp"
+        android:background="@drawable/img_bg_edit"
+        android:hint="@string/nick_name"
+        android:imeOptions="actionDone"
+        android:lines="1"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text="2"
+        android:textAlignment="center"
+        android:textColor="#abb2bc"
+        android:textColorHint="#7d93aa" />
+
+    <EditText
+        android:id="@+id/media_server_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="80dp"
+        android:background="@drawable/img_bg_edit"
+        android:hint="媒体服务器地址"
+        android:imeOptions="actionDone"
+        android:lines="1"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textAlignment="center"
+        android:textColor="#abb2bc"
+        android:textColorHint="#7d93aa"
+        android:visibility="gone" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="50dp"
+        android:background="#2d343e" />
+
+    <RadioGroup
+        android:id="@+id/media_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:checkedButton="@+id/visitor_mode"
+        android:orientation="horizontal"
+        android:theme="@style/ModuleRadioButton">
+
+        <RadioButton
+            android:id="@+id/video_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:text="@string/normal_mode"
+            android:textColor="#7d93aa"
+            android:textSize="13sp" />
+
+        <RadioButton
+            android:id="@+id/audio_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:text="@string/audio_mode"
+            android:textColor="#7d93aa"
+            android:textSize="13sp" />
+
+        <RadioButton
+            android:id="@+id/visitor_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:text="@string/visitor_mode"
+            android:textColor="#7d93aa"
+            android:textSize="13sp" />
+
+    </RadioGroup>
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/vvroom_version"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:paddingLeft="5dp"
+        android:textColor="#abb2bc"
+        android:textSize="11sp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@mipmap/img_join_line" />
+
+    <TextView
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#66000000"
+        android:padding="10dp"
+        android:text="@string/login"
+        android:textAlignment="center"
+        android:textColor="@color/whitesmoke"
+        android:textSize="20sp" />
+
+</LinearLayout>
