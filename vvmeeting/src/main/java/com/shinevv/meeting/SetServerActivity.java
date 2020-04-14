@@ -28,19 +28,10 @@ public class SetServerActivity extends AppCompatActivity {
 
     private void initData() {
         SharedPreferences sp = getSharedPreferences("ip", MODE_PRIVATE);
-        String name = sp.getString("server", "https://meet.shinevv.com:3451/api/");
-
+        String name = sp.getString("server", "https://123.57.67.34:3451/api/");
         if (!name.equals("")) {
             editTextServer.setText(name);
         }
-
-//        if (!ip.equals("")) {
-//            editTextTIp.setText(ip);
-//        }
-//
-//        if (!port.equals("")) {
-//            editTextTPort.setText(port);
-//        }
 
     }
 
@@ -60,8 +51,6 @@ public class SetServerActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String server = editTextServer.getText().toString();
-                //   String ip = editTextTIp.getText().toString();
-                // String port = editTextTPort.getText().toString();
                 if (server != null && !server.equals("")) {
                     SharedPreferences sp = getSharedPreferences("ip", MODE_PRIVATE);
                     SharedPreferences.Editor edit = sp.edit();

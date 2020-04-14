@@ -145,17 +145,19 @@ public class LoginActivity extends AppCompatActivity {
 
         SharedPreferences sp = getSharedPreferences("ip", MODE_PRIVATE);
         String server = sp.getString("server", "");
-//        final String ip = sp.getString("ip", "");
-//        final String port = sp.getString("port", "");
         if (server.equals("")) {
             Toast.makeText(LoginActivity.this, "请先配置服务地址！", Toast.LENGTH_LONG).show();
             return;
         }
+        if (!server.substring(0, 5).equals("https") || !server.substring(server.length() - 1).equals("/")) {
+            Toast.makeText(LoginActivity.this, "服务器地址有误！", Toast.LENGTH_LONG).show();
+            return;
+        }
 
         VVMeetingApplication.upDataAPI(server);
-        final String mediaServerAddress = etMediaServerAddress.getText().toString().trim();
 
         showLoadingDialog(this, R.string.tips, R.string.loading);
+
         VVRoomApplication.getServerAPI()
                 .login(roomId, roomPassword)
                 .enqueue(new Callback<BaseServerRes<VVAuthResponse>>() {
